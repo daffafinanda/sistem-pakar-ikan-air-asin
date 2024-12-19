@@ -165,7 +165,7 @@ const ExpertSystem = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container max-w-2xl mx-auto p-4 border border-gray-300 rounded-xl">
       <Card className="max-w-2xl mx-auto">
         <CardHeader>
           <CardTitle>Sistem Pakar Identifikasi Ikan</CardTitle>
@@ -215,7 +215,35 @@ const ExpertSystem = () => {
           )}
         </CardContent>
       </Card>
+      {gameStatus === 'finished' && result && (
+      <div className="space-y-4 max-w-2xl mx-auto mt-10">
+        <Alert>
+          <AlertDescription>
+            Ikan yang Anda maksud adalah: <strong>{result.name}</strong>
+          </AlertDescription>
+        </Alert>
+        <div className="space-y-2">
+          <p className="font-medium">Ciri-ciri ikan:</p>
+          <ul className="list-disc list-inside text-gray-700">
+            {result.characteristics.map((charId) => {
+              const characteristic = characteristicsData.find((c) => c.id === charId);
+              return (
+                <li key={charId}>
+                  {characteristic ? characteristic.description : `Ciri tidak ditemukan (ID: ${charId})`}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <Button onClick={resetGame} className="w-full">
+          Mulai Lagi
+        </Button>
+      </div>
+    )}
+
     </div>
+    
+          
   );
 };
 
