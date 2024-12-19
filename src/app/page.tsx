@@ -15,46 +15,43 @@ interface Characteristic {
   description: string;
 }
 
-const characteristicsData: Characteristic[] = [
-  { id: 'B1', description: 'Hidup di laut dengan kadar garam tinggi' },
-  { id: 'B2', description: 'Memiliki warna tubuh cerah' },
-  { id: 'B3', description: 'Bentuk tubuh ramping dan aerodinamis' },
-  { id: 'B4', description: 'Sisik lebih tebal dan keras' },
-  { id: 'B5', description: 'Memiliki kemampuan osmoregulasi' },
-  { id: 'B6', description: 'Insang yang efisien untuk menyaring oksigen' },
-  { id: 'B7', description: 'Sering hidup berkelompok' },
-  { id: 'B8', description: 'Sirip kuat untuk menghadapi arus laut' },
-  { id: 'B9', description: 'Bertelur di tempat tertentu' },
-  { id: 'B10', description: 'Pola makan beragam' },
-  { id: 'B11', description: 'Beberapa memiliki tubuh pipih' },
-  { id: 'B12', description: 'Dapat beradaptasi dengan tekanan air laut' },
-  { id: 'B13', description: 'Memiliki mata yang peka terhadap cahaya bawah laut' },
-  { id: 'B14', description: 'Rata-rata ukuran tubuh lebih besar dari ikan air tawar' },
-  { id: 'B15', description: 'Beberapa memiliki duri pada tubuhnya untuk perlindungan' }
+const fishData : Fish[] = [
+  { id: "A1", name: "Ikan Tuna", characteristics: ["B1", "B15"] },
+  { id: "A2", name: "Ikan Hiu", characteristics: ["B2", "B14"] },
+  { id: "A3", name: "Ikan Barracuda", characteristics: ["B3", "B19"] },
+  { id: "A4", name: "Ikan Clownfish", characteristics: ["B16", "B17"] },
+  { id: "A5", name: "Ikan Marlin", characteristics: ["B5", "B19"] },
+  { id: "A6", name: "Ikan Sarden", characteristics: ["B6", "B15"] },
+  { id: "A7", name: "Ikan Napoleon Wrasse", characteristics: ["B7", "B18"] },
+  { id: "A8", name: "Ikan Kerapu", characteristics: ["B8", "B20"] },
+  { id: "A9", name: "Ikan Pari", characteristics: ["B9", "B13"] },
+  { id: "A10", name: "Ikan Bawal", characteristics: ["B10", "B11", "B12"] },
 ];
 
-const fishData: Fish[] = [
-  { id: 'A1', name: 'Tuna', characteristics: ['B1', 'B2', 'B3', 'B6', 'B8', 'B9'] },
-  { id: 'A2', name: 'Kakap Merah', characteristics: ['B1', 'B2', 'B4', 'B6', 'B8', 'B10'] },
-  { id: 'A3', name: 'Kerapu', characteristics: ['B1', 'B4', 'B7', 'B9', 'B10'] },
-  { id: 'A4', name: 'Pari', characteristics: ['B1', 'B11', 'B8', 'B12', 'B15'] },
-  { id: 'A5', name: 'Hiu', characteristics: ['B1', 'B3', 'B4', 'B13', 'B14'] },
-  { id: 'A6', name: 'Tenggiri', characteristics: ['B1', 'B2', 'B3', 'B6', 'B10'] },
-  { id: 'A7', name: 'Baronang', characteristics: ['B1', 'B4', 'B7', 'B10', 'B11'] },
-  { id: 'A8', name: 'Cakalang', characteristics: ['B1', 'B2', 'B3', 'B9', 'B10'] },
-  { id: 'A9', name: 'Bandeng', characteristics: ['B1', 'B4', 'B6', 'B7', 'B10'] },
-  { id: 'A10', name: 'Sardin', characteristics: ['B1', 'B2', 'B3', 'B10', 'B13'] },
-  { id: 'A11', name: 'Layang', characteristics: ['B1', 'B2', 'B3', 'B6', 'B9'] },
-  { id: 'A12', name: 'Tongkol', characteristics: ['B1', 'B2', 'B3', 'B10', 'B14'] },
-  { id: 'A13', name: 'Salmon', characteristics: ['B1', 'B3', 'B6', 'B9', 'B12'] },
-  { id: 'A14', name: 'Lumba-lumba (Mahi-Mahi)', characteristics: ['B1', 'B3', 'B5', 'B10', 'B14'] },
-  { id: 'A15', name: 'Belut Laut', characteristics: ['B1', 'B11', 'B5', 'B12', 'B13'] },
-  { id: 'A16', name: 'Kuwe', characteristics: ['B1', 'B3', 'B6', 'B9', 'B14'] },
-  { id: 'A17', name: 'Kakap Hitam', characteristics: ['B1', 'B2', 'B4', 'B7', 'B10'] },
-  { id: 'A18', name: 'Marlin', characteristics: ['B1', 'B3', 'B6', 'B12', 'B14'] },
-  { id: 'A19', name: 'Ikan Dori', characteristics: ['B1', 'B3', 'B5', 'B8', 'B10'] },
-  { id: 'A20', name: 'Ikan Setuhuk', characteristics: ['B1', 'B2', 'B3', 'B5', 'B12'] }
+const characteristicsData : Characteristic[] = [
+  { id: "B1", description: "Tubuh berbentuk cerutu menyerupai torpedo" },
+  { id: "B2", description: "Tubuh ramping" },
+  { id: "B3", description: "Kemampuan untuk beradaptasi dengan suhu air yang berfluktuasi" },
+  { id: "B4", description: "Tubuh besar" },
+  { id: "B5", description: "Tubuh lonjong" },
+  { id: "B6", description: "Ukuran tubuh panjang" },
+  { id: "B7", description: "Memiliki tombak bundar yang memanjang di moncongnya" },
+  { id: "B8", description: "Memiliki bibir tebal" },
+  { id: "B9", description: "Memiliki mulut lebar" },
+  { id: "B10", description: "Berbadan kekar dan berotot" },
+  { id: "B11", description: "Tubuh gepeng & lebar" },
+  { id: "B12", description: "Tubuh oval & pipih" },
+  { id: "B13", description: "Memiliki warna cokelat" },
+  { id: "B14", description: "Memiliki warna abu-abu" },
+  { id: "B15", description: "Memiliki warna putih-keperakan" },
+  { id: "B16", description: "Memiliki warna oranye" },
+  { id: "B17", description: "Memiliki garis-garis putih di tubuhnya" },
+  { id: "B18", description: "Memiliki warna hijau" },
+  { id: "B19", description: "Memiliki warna biru gelap hingga hitam" },
+  { id: "B20", description: "Memiliki bintik-bintik pada tubuhnya" },
+  { id: "B21", description: "Memiliki warna biru" },
 ];
+
 
 const ExpertSystem = () => {
   const [availableFish, setAvailableFish] = useState<Fish[]>(fishData);
